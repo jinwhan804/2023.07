@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .login_box{
+            width: 300px;
+            height: 300px;
+            border: 1px solid rgb(206, 195, 195);
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: center;
+            position: relative;
+            border-radius: 10px;
+        }
+
+        .login_box h2{
+            position: absolute;
+            top: 100px;
+        }
+
+        .login_box div{
+            width: 280px;
+            height: 140px;
+            position: absolute;
+            top: 100px;
+        }
+
+        .login_box div label{
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%,0);
+            width: 250px;
+            height: 30px;
+            font-weight: bold;
+        }
+
+        .login_box div .label_id{
+            top: 10px;
+        }
+
+        .login_box div .label_pw{
+            top: 75px;
+        }
+
+        .login_box div .id,
+        .login_box div .pw{
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%,0);
+            width: 250px;
+            height: 30px;
+            border-radius: 5px;
+            border: 1px solid rgb(206, 195, 195);
+        }
+
+        .login_box div .id{
+            top: 30px;
+        }
+
+        .login_box div .pw{
+            bottom: 10px;
+        }
+
+        button{
+            position: absolute;
+            bottom: 20px;
+            width: 250px;
+            height: 30px;
+            background-color: rgba(78, 162, 56, 0.832);
+            color: white;
+            border: 1px solid rgba(78, 162, 56, 0.832);
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login_box">
+        <h1>Login</h2>
+            <div>
+                <label for="" class="label_id">너의이름</label><br>
+                <input type="text" class="id" placeholder="요기에 입력"><br>
+                <label for="" class="label_pw">비밀번호</label><br>
+                <input type="text" class="pw" placeholder="요기에 입력"><br>
+            </div>
+        <button class="login_btn">로그인 버튼</button>
+    </div>
+</body>
+</html>

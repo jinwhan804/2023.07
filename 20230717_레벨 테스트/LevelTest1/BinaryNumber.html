@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // 십진법을 이진법으로
+    
+    function base10ToString(n){
+        let arr = [];
+
+        function base10ToStringHelper(a){
+            arr.unshift((a % 2).toString());
+            a = Math.floor(a / 2);
+
+            if(a != 1){
+                base10ToStringHelper(a);
+            }else{
+                arr.unshift(a.toString());
+                return arr;
+            }
+        }
+
+        if(n >= 2){
+            base10ToStringHelper(n);
+            
+            return arr.join('');
+        }else{
+            return n.toString();
+        }
+
+    }
+
+    console.log(base10ToString(100)); // 1100100
+</script>
+</html>

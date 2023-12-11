@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let a = [[1,2],[2,4]];
+    let b = [[1,0],[0,3]];
+
+    function MatrixMulti(mat1,mat2){
+        if(mat1[0].length != mat2.length){
+            return -1;
+        }else{
+            let arr = [];
+
+            for (let a = 0; a < mat1.length; a++) {
+                let subArr = [];
+                
+                for (let b = 0; b < mat2[a].length; b++) {
+                    let sum = 0;
+
+                    for (let c = 0; c < mat1[a].length; c++) {
+                        sum += mat1[a][c] * mat2[c][b];
+                    }
+                    
+                    subArr.push(sum);
+                }
+
+                arr.push(subArr);
+            }
+
+            return arr;
+        }
+    }
+
+    console.log(MatrixMulti(a,b));
+</script>
+</html>

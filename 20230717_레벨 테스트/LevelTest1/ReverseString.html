@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // 뒤집은 문자열과 비교
+
+    let result;
+    
+    function isPalindromeRecursive(word){
+        let leng = word.length - 1;
+        let index = 0;
+
+        isPalindromeRecursiveHelper(word,index,leng);
+
+        return result;
+    }
+
+    function isPalindromeRecursiveHelper(word, beginPos, endPos){
+        if(word[beginPos] !== word[endPos]){
+            result = false;
+        }else{
+            if(beginPos + 1 !== endPos && beginPos + 2 !== endPos){
+                isPalindromeRecursiveHelper(word,beginPos + 1,endPos - 1);
+            }else{
+                result = true;
+            }
+        }
+    }
+
+    console.log(isPalindromeRecursive('appleelppa')); // true
+    console.log(isPalindromeRecursive('appleelpaa')); // false
+</script>
+</html>

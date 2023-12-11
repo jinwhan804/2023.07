@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let scoreStr = '97 86 75 66 55 97 85 97 97 95';
+    
+    function countingWinners(score){
+        let arr = score.split(' ');
+        
+        let compare = [];
+        for (let i = 0; i < arr.length; i++) {
+            if(!compare.includes(arr[i])){
+                compare.push(arr[i]);
+            }
+        }
+        
+        compare.sort((a,b)=>{
+            return b-a;
+        })
+    
+        let winners = arr.filter((el)=>{
+            return el >= compare[2];
+        })
+
+        return winners.length;
+    }
+
+    console.log(countingWinners(scoreStr));
+</script>
+</html>

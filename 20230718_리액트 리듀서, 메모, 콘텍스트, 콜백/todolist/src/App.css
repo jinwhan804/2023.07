@@ -1,0 +1,38 @@
+.App {
+  text-align: center;
+}
+
+.list_main ul{
+  list-style: none;
+}
+
+.list_main ul li{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+.list_main div{
+  height: 50px;
+  border: 1px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.index{
+  width: 50px;  
+}
+
+.todo{
+  width: 500px;
+}
+
+.date{
+  width: 100px;
+}
+
+.popup{
+  display: block;
+}
